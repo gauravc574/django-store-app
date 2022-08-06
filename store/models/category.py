@@ -8,3 +8,7 @@ class Category(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    @staticmethod
+    def get_all_categories():
+        return Category.objects.all()
